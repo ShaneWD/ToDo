@@ -12,6 +12,11 @@
     <body>
         <header>
             <h1 style ="text-align:center;" >ToDo List!</h1>
+            <form method='POST'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type='submit' value='Save'/>
+            </form>
         </header>
         <main>
         <!--https://craftcms.stackexchange.com/questions/9071/whats-the-best-way-to-increment-a-number-of-a-class-or-id-->
@@ -32,8 +37,11 @@
                         </div>
                     {% endif %}
                 {%endfor %}
+                
         </main>
         <footer>
+            <button class="button button2">Blue</button>
+            <br/>
             <p1>Contacts</p1>
         </footer>
         <script src="" async defer></script>
