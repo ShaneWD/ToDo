@@ -29,7 +29,9 @@
                             <img src="{%static 'images/card.png'%}">
                             <div class = "centered">
                                 <h2 >{{task}}</h2>
-                                <p1>{{task.notes}}</p1>
+                                <div class="myClass">
+                                    {{task.notes}}
+                                </div>
                             </div>
                             <div class = "top-right">
                                 <p2>{{task.created|date:"M d, Y" }}</p2>
@@ -42,9 +44,10 @@
         <footer>
         <br/>
             <div class = "container">
-                <div class = "center">
-                    <button class="button button2">View More</button>
-                </div>
+                <img src="{%static 'images/button.png'%}" width="20%" height="20%"                     onclick="DoSomething();" />
+                    <div class = "centered">
+                        <p1>View More</p1>
+                    </div>
             </div>
             
             
