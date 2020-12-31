@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '%jgwh2+u&if2cav(2oik5!sjgx+5^*vis^qpb8%*w42ynlmt&l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://djangotest10.herokuapp.com/', 'djangotest10.herokuapp.com/,', '127.0.0.1',]
 
 
 # Application definition
