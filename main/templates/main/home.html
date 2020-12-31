@@ -12,7 +12,7 @@
     <body>
         <header>
             <h1 style ="text-align:center;" >ToDo List!</h1>
-            <form method='POST'>
+            <form style="text-align:center"method='POST'>
                 {% csrf_token %}
                 {{form.as_p}}
                 <input type='submit' value='Save'/>
@@ -26,16 +26,16 @@
                     {% if forloop.counter <= 4  %}
                         <br/>
                         <div class = "container">
-                            <img src="{%static 'images/card.png'%}">
-                            <div class = "centered">
-                                <h2 >{{task}}</h2>
-                                <div class="myClass">
-                                    {{task.notes}}
-                                </div>
-                            </div>
-                            <div class = "top-right">
-                                <p2>{{task.created|date:"M d, Y" }}</p2>
-                            </div>
+                            <img class = "center" src="{%static 'images/card.png'%}">
+                            <span class = "centered">
+                                <h1 style="font-size: 4vw" >{{task}}</h1>
+                                <span class="myClass">
+                                    <p style="font-size: 2vw">{{task.notes}}</p>
+                                </span>
+                            </span>
+                            <span class = "top-right">
+                                <p2 style="font-size: 1.4vw">{{task.created|date:"M d, Y" }}</p2>
+                            </span>
                         </div>
                     {% endif %}
                 {%endfor %}
@@ -46,7 +46,7 @@
             <div class = "container">
                 <img src="{%static 'images/button.png'%}" width="20%" height="20%"                     onclick="DoSomething();" />
                     <div class = "centered">
-                        <p1>View More</p1>
+                        <p1 style="font-size: 1.7vw">Reached limit</p1>
                     </div>
             </div>
             
