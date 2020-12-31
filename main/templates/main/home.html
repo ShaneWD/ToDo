@@ -37,20 +37,19 @@
                                 <p2 style="font-size: 1.4vw">{{task.created|date:"M d, Y" }}</p2>
                             </span>
                         </div>
+                    {% else %}
+                        <div class = "container">
+                            <img src="{%static 'images/button.png'%}" width="20%" height="20%"                     onclick="DoSomething();" />
+                                <div class = "centered">
+                                    <p1 style="font-size: 1.7vw">Reached limit</p1>
+                                </div>
+                        </div>
                     {% endif %}
                 {%endfor %}
                 
         </main>
         <footer>
-        <br/>
-            <div class = "container">
-                <img src="{%static 'images/button.png'%}" width="20%" height="20%"                     onclick="DoSomething();" />
-                    <div class = "centered">
-                        <p1 style="font-size: 1.7vw">Reached limit</p1>
-                    </div>
-            </div>
-            
-            
+            <br/>
             <br/>
             <p1>Contacts</p1>
         </footer>
