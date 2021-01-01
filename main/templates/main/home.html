@@ -16,7 +16,7 @@
             {% block header %}
             <form style="text-align:center"method='POST'>
                 {% csrf_token %}
-                {{form }}
+                <h2 style="padding: 12px 20px;">{{form}}<h2>
                 <input type='submit' value='Save'/>
             </form>
             {% endblock header %}
