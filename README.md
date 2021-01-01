@@ -1,2 +1,5 @@
 # ToDo
-simple todo application.
+### Installation
+```cmd
+pip install -r requirements.txt
+```
