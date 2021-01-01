@@ -41,6 +41,9 @@
                             <span class = "top-left">
                                 <a href = "{% url 'update_task' task.id %}" style="font-size: 1.4vw">Update</a>
                             </span>
+                            <span class = "bottom-left">
+                                <a href = "{% url 'delete_task' task.id %}" style="font-size: 1.4vw">Delete</a>
+                            </span>
                         </div>
                     {% else %}
                         <div class = "container">
