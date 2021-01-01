@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        <meta name="description" content="">
+        <meta name="description" content="ToDo, ShaneWD">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{%static 'CSS/style.css'%}">
     </head>
@@ -22,38 +22,41 @@
         </header>
         <main>
         <!--https://craftcms.stackexchange.com/questions/9071/whats-the-best-way-to-increment-a-number-of-a-class-or-id-->
-            {%block content%} {%endblock content%}
             
-                {% for task in tasks %}
-                    {% if forloop.counter <= 10  %}
-                        <br/>
-                        <div class = "container">
-                            <img class = "center" src="{%static 'images/card.png'%}">
-                            <span class = "centered">
-                                <h1 style="font-size: 4vw" >{{task}}</h1>
-                                <span class="myClass">
-                                    <p style="font-size: 2vw">{{task.notes}}</p>
-                                </span>
+            {% for task in tasks %}
+                {% if forloop.counter <= 10  %}
+                    <br/>
+                    <div class = "container">
+                        <img class = "center" src="{%static 'images/card.png'%}">
+                        <span class = "centered">
+                            {% if task.completed == True %}
+                            <del style="font-size: 4vw" >{{task}}</del>
+                            {%else%}
+                            <h1 style="font-size: 4vw" >{{task}}</h1>
+                            {%endif%}
+                            <span class="myClass">
+                                <p style="font-size: 2vw">{{task.notes}}</p>
                             </span>
-                            <span class = "top-right">
-                                <p2 style="font-size: 1.4vw">{{task.created|date:"M d, Y" }}</p2>
-                            </span>
-                            <span class = "top-left">
-                                <a href = "{% url 'update_task' task.id %}" style="font-size: 1.4vw">Update</a>
-                            </span>
-                            <span class = "bottom-left">
-                                <a href = "{% url 'delete_task' task.id %}" style="font-size: 1.4vw">Delete</a>
-                            </span>
-                        </div>
-                    {% else %}
-                        <div class = "container">
-                            <img src="{%static 'images/button.png'%}" width="20%" height="20%"                     onclick="DoSomething();" />
-                                <div class = "centered">
-                                    <p1 style="font-size: 1.7vw">Reached limit</p1>
-                                </div>
-                        </div>
-                    {% endif %}
-                {%endfor %}
+                        </span>
+                        <span class = "top-right">
+                            <p2 style="font-size: 1.4vw">{{task.created|date:"M d, Y" }}</p2>
+                        </span>
+                        <span class = "top-left">
+                            <a href = "{% url 'update_task' task.id %}" style="font-size: 1.4vw">Update</a>
+                        </span>
+                        <span class = "bottom-left">
+                            <a href = "{% url 'delete_task' task.id %}" style="font-size: 1.4vw">Delete</a>
+                        </span>
+                    </div>
+                {% else %}
+                    <div class = "container">
+                        <img src="{%static 'images/button.png'%}" width="20%" height="20%"                     onclick="DoSomething();" />
+                            <div class = "centered">
+                                <p1 style="font-size: 1.7vw">Reached limit</p1>
+                            </div>
+                    </div>
+                {% endif %}
+            {%endfor %}
                 
         </main>
         <footer>
