@@ -16,5 +16,6 @@ Including another URLconf
 from django.urls import path, include
 from . import views
 urlpatterns = [
-    path("", views.home, name = "home")
+    path("", views.home, name = "home"),
+    path("update/<str:pk>/", views.updateTask, name = "update_task")
 ]

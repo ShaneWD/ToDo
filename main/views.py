@@ -19,3 +19,16 @@ def home(request):
     
 
     return render(request, "main/home.html", context)
+
+def updateTask(request, pk):
+
+    task = Task.objects.get(id=pk)
+
+    form = TaskForm(instance=task)
+    context = {'form': form}
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    return render (request, "main/update.html", context)

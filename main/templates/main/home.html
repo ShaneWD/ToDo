@@ -12,11 +12,13 @@
     <body>
         <header>
             <h1 style ="text-align:center;" >ToDo List!</h1>
+            {% block header %}
             <form style="text-align:center"method='POST'>
                 {% csrf_token %}
                 {{form.as_p}}
                 <input type='submit' value='Save'/>
             </form>
+            {% endblock header %}
         </header>
         <main>
         <!--https://craftcms.stackexchange.com/questions/9071/whats-the-best-way-to-increment-a-number-of-a-class-or-id-->
@@ -35,6 +37,9 @@
                             </span>
                             <span class = "top-right">
                                 <p2 style="font-size: 1.4vw">{{task.created|date:"M d, Y" }}</p2>
+                            </span>
+                            <span class = "top-left">
+                                <a href = "{% url 'update_task' task.id %}" style="font-size: 1.4vw">Update</a>
                             </span>
                         </div>
                     {% else %}

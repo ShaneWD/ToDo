@@ -1,0 +1,10 @@
+{%extends "main/home.html"%}
+{%load static%}
+{%block header%}
+<form style="text-align:center"method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='update'/>
+</form>
+
+{%endblock header%}
