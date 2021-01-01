@@ -1,2 +1,7 @@
 # ToDo
-simple todo application.
+### Installation
+```cmd
+pip install -r requirements.txt
+```
+### What the project looks like:
+<image src="https://github.com/ShaneWD/ToDo/blob/master/demo.png">
