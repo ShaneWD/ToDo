@@ -68,3 +68,13 @@
 .h2{
   font-size: 25%;
 }
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #0364e4;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

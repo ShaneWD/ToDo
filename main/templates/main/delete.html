@@ -1,9 +1,9 @@
-<p>Are you sure you want to delete "{{item}}" ?</p>
+<h2 style="text-align: center">Are you sure you want to delete "{{item.title}}" ?</h2>
 
 <a href="{%url 'home'%}">Cancel</a>
 
-<form method="post" action ="">
+<form style="text-align:center" method="post" action ="">
     {% csrf_token %}
-    <input type="submit" name="Confirm">
+    <input type="submit" name="Confirm" value="Yes">
 
 </form>
