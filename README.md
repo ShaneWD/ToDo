@@ -1,7 +1,8 @@
 # ToDo
 
-### Steps
-- ``` virtualenv venv ```
+### How to set up project (Window's CMD)
+- ``` pip install virtualenv ```
+- ``` virtualenv venv ``` (This will create a new folder named "venv", you can change the name to whatever you want)
 - ``` cd venv ```
 - ``` scripts\activate ```
 - ``` git init ```
