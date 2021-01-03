@@ -15,3 +15,5 @@
 ### How the project behaves:
 <image src="https://github.com/ShaneWD/ToDo/blob/master/ToDo-demo.gif">
   
+ ###### Video from release v1.0 or "First Released": https://github.com/ShaneWD/ToDo/releases/tag/v1.0 
+  
