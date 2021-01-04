@@ -78,3 +78,11 @@ input[type=button], input[type=submit], input[type=reset] {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 8%;
+}
