@@ -2,11 +2,11 @@
     {% csrf_token %}
     {{form.as_p}}
     <div>
-        <button type="submit">Sign Up</button>
+        <button type="submit">Login In</button>
     </div>
 </form>
 <div>
     <small>
-        Already Have an Account? <a href="{%url 'register'%}">Sign In</a>
+        Need an account? <a href="{%url 'register'%}">Sign Up Now</a>
     </small>
 </div>
